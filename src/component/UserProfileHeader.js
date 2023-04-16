@@ -25,7 +25,7 @@ const UserProfileHeader = ({ user, isSubscibed, setIsSubscribed }) => {
                 </View>
                 <Text style={{fontSize: 20, fontWeight: '600'}}>{user.name}</Text>
                 <Text style={{color: 'grey', marginBottom: 10}}>@{user.handle}</Text>
-                <Text style={{lineHeight: 20}}>{user.bio}</Text>
+                <Text style={{lineHeight: 15}}>{user.bio}</Text>
                 
 
                 <Text style={{color: 'grey', marginTop: 20, fontWeight: 'bold'}}>SUBSCRIPTION</Text>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import UserProfileHeader from "../../src/component/UserProfileHeader";
 import posts from '../../assets/data/posts';
 import  Post from '../../src/component/Post';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const ProfilePage = () => {
     const [isSubscibed, setIsSubscribed] = useState(false)
@@ -18,12 +19,29 @@ const ProfilePage = () => {
 
     if(!isSubscibed) {
         return (
-        <UserProfileHeader 
-            user={user}
-            isSubscibed={isSubscibed}
-            setIsSubscribed={setIsSubscribed}
-        />
-        
+            <View>
+                <UserProfileHeader 
+                    user={user}
+                    isSubscibed={isSubscibed}
+                    setIsSubscribed={setIsSubscribed}
+                />
+                <View style={{backgroundColor: 'gainsboro', alignItems: 'center', padding: 20}}>
+                    <FontAwesome5 name="lock" size={50} color="gray" />
+                    <Text 
+                        style={{
+                            backgroundColor: 'royalblue', 
+                            height: 50, 
+                            borderRadius: 25, 
+                            overflow: 'hidden',
+                            padding: 15,
+                            color: 'white',
+                            margin: 20
+                            }}
+                    >
+                        Subscribe to see user's posts
+                    </Text>
+                </View>
+            </View>
         )}
     return (
 
