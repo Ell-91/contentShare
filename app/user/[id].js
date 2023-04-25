@@ -1,17 +1,25 @@
 import { useSearchParams } from "expo-router";
 import { Text, StyleSheet, FlatList, View } from "react-native";
-import users from '../../assets/data/users'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UserProfileHeader from "../../src/component/UserProfileHeader";
 import posts from '../../assets/data/posts';
 import  Post from '../../src/component/Post';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { DataStore } from 'aws-amplify';
+import { User } from '../../src/models'
 
 const ProfilePage = () => {
+    const [user, setUser] = useState();
     const [isSubscibed, setIsSubscribed] = useState(false)
+    
     const { id } = useSearchParams(); 
 
-    const user = users.find(u => u.id === id);
+    //when id changes we need to query a new user
+    useEffect(() => {
+        //fetch users
+        DataStore.query(User, id).then(setUser);
+      }, [id])
+    // const user = users.find(u => u.id === id);
 
     if (!user) {
         return <Text>User not found </Text>

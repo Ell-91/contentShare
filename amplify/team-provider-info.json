@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-contentshare-staging-225645-authRole",
+      "UnauthRoleArn": "arn:aws:iam::516680963116:role/amplify-contentshare-staging-225645-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::516680963116:role/amplify-contentshare-staging-225645-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-contentshare-staging-225645-deployment",
+      "UnauthRoleName": "amplify-contentshare-staging-225645-unauthRole",
+      "StackName": "amplify-contentshare-staging-225645",
+      "StackId": "arn:aws:cloudformation:us-east-1:516680963116:stack/amplify-contentshare-staging-225645/496f3ab0-e2f3-11ed-b7ee-0aa5e5b36e85",
+      "AmplifyAppId": "d18iqfraie5xiv"
+    },
+    "categories": {
+      "auth": {
+        "ContentShare": {}
+      }
+    }
+  }
+}
